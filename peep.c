@@ -16,16 +16,15 @@ int peep(const char *format, conv_t form_list[], va_list prt)
 	{
 		if (format[x] == '%') /*Checks for format specifiers*/
 		{
-			/*Iterates through struct to find the right func*/
 			y = 0;
 			while (form_list[y].sym != NULL)
 			{
 				if (format[x + 1] == form_list[y].sym[0])
 				{
-					return_v = form_list[y].f(prt);
-					if (return_v == -1)
+					ret_v = form_list[y].f(prt);
+					if (ret_v == -1)
 						return (-1);
-					print_chars += return_v;
+					print_chars += ret_v;
 					break;
 				}
 				y++;
