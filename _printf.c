@@ -2,44 +2,34 @@
 /**
  * _printf - printing out anything
  * @format: A pointer to character string
- * Return: 0 if success
+ * Return: print_chars
  */
 int _printf(const char *format, ...)
 {
-	int i;
-
+	int print_chars;
+	conv_t form_list[] = {
+		{"c", print_char},
+		{"s", print_str},
+		{"%", print_per},
+		{"d", print_int},
+		{"i", print_int},
+		{"b", print_binary},
+		{"r", print_rev},
+		{"R", rot13},
+		{"u", unsigned_int},
+		{"o", print_oct},
+		{"x", print_hex},
+		{"X", print_heX},
+		{NULL, NULL}
+	};
 	va_list prt;
 
-	va_start(prt, format);
+	if (format == NULL)
+		return (-1);
 
-	i = 0;
-	while (format[i])
-	{
-		if (format[i] == '%')
-		{
-		i++;
-		switch (format[i])
-		{
-		case 'c':
-			_putchar(va_arg(prt, int));
-			break;
-		case 's':
-			_puts(va_arg(prt, char *));
-			break;
-		case '%':
-			_putchar('%');
-			break;
-		default:
-			_putchar(format[i]);
-			continue;
-		}
-		}
-		else
-		{
-			_putchar(format[i]);
-		}
-	i++;
-	}
+	va_start(prt, format);
+	/*Calling peep function*/
+	print_chars = peep(format, form_list, prt);
 	va_end(prt);
-	return (0);
+	return (print_chars);
 }
