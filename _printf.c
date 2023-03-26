@@ -14,12 +14,13 @@ int _printf(const char *format, ...)
 		{"d", print_int},
 		{"i", print_int},
 		{"u", unsigned_int},
-		/*{"b", print_binary},
-		{"r", print_rev},
-		{"R", rot13},
-		{"o", print_oct},
-		{"x", print_hex},
-		{"X", print_heX},*/
+		/**
+		 * {"b", print_binary},
+		 * {"R", rot13,
+		 * {"o", print_oct},
+		 * {"x", print_hex},
+		 * {"X", print_heX},
+		 */
 		{NULL, NULL}
 	};
 	va_list prt;
