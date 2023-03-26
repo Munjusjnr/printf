@@ -9,7 +9,7 @@
  */
 int peep(const char *format, conv_t form_list[], va_list prt)
 {
-	int x, y, return_v, print_chars;
+	int x, y, ret_v, print_chars;
 
 	print_chars = 0;
 	for (x = 0; format[x] != '\0'; x++)/* Iterates through the main str*/

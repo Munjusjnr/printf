@@ -13,13 +13,13 @@ int _printf(const char *format, ...)
 		{"%", print_per},
 		{"d", print_int},
 		{"i", print_int},
-		{"b", print_binary},
+		{"u", unsigned_int},
+		/*{"b", print_binary},
 		{"r", print_rev},
 		{"R", rot13},
-		{"u", unsigned_int},
 		{"o", print_oct},
 		{"x", print_hex},
-		{"X", print_heX},
+		{"X", print_heX},*/
 		{NULL, NULL}
 	};
 	va_list prt;
