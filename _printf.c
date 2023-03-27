@@ -10,6 +10,7 @@ int _printf(const char *format, ...)
 	conv_t form_list[] = {
 		{"c", print_char},
 		{"s", print_str},
+		{"S", print_String},
 		{"%", print_per},
 		{"d", print_int},
 		{"i", print_int},
