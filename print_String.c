@@ -1,16 +1,16 @@
 #include "main.h"
 /**
 * print_String - prints non-printable character in hex
-* @string: this is a pointer to character string
-* Return: void
+* @list: list of functions
+* Return: 0
 */
 
 int print_String(va_list list)
 {
-	char hex[] = "0123456789ABCDEF";
+	const char *hex = "0123456789ABCDEF";
 	int i = 0;
 	char *string;
-	
+
 	string = va_arg(list, char *);
 	while (string[i] != '\0')
 	{
