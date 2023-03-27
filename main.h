@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
 
 struct conv
 {
@@ -22,4 +24,17 @@ int print_int(va_list list);
 int unsigned_int(va_list list);
 int print_number(va_list args);
 int print_unsigned_num(unsigned int n);
+int hexa_check(int, char);
+int print_binary(va_list list);
+int print_oct(va_list list);
+int print_hex(va_list list);
+int print_heX(va_list list);
+int print_rev(va_list arg);
+int rot13(va_list list);
+/* functions */
+void write_base(char *str);
+unsigned int base_length(unsigned int num, int base);
+char *rev_string(char *s);
+char *_memcpy(char *dest, char *src, unsigned int n);
+
 #endif

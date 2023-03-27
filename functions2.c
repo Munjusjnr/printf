@@ -64,3 +64,59 @@ int print_unsigned_num(unsigned int n)
 
 	return (len);
 }
+
+/**
+ * print_rev - Calls a function to reverse and print a string
+ * @arg: Argument passed to the function
+ * Return: The amount of characters printed
+ */
+int print_rev(va_list list)
+{
+	int length, count = 0;
+	char *string = va_arg(list, char *);
+
+	length = strlen(string) - 1;
+	if (string == NULL)
+	{
+		return (-1);
+	}
+	while (length >= 0)
+	{
+		_putchar(*(string + length));
+		length--;
+		count++;
+	}
+	return (count);
+}
+
+/**
+ * rot13 - Converts string to rot13
+ * @list: string to convert
+ * Return: converted string
+ */
+int rot13(va_list list)
+{
+	int a;
+	int b;
+	char *str;
+	char v[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char u[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
+	str = va_arg(list, char *);
+	if (str == NULL)
+		return (-1);
+	for (a = 0; str[a] != '\0'; a++)
+	{
+		for (b = 0; b <= 52; b++)
+		{
+			if (str[a] == v[b])
+			{
+				_putchar(u[b]);
+				break;
+			}
+		}
+		if (b == 53)
+			_putchar(str[a]);
+	}
+	return (a);
+}
