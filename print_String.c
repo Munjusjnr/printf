@@ -12,6 +12,10 @@ int print_String(va_list list)
 	char *string;
 
 	string = va_arg(list, char *);
+	if (string == NULL)
+	{
+		string = "(null)";
+	}
 	while (string[i] != '\0')
 	{
 		if (string[i] < 32 || string[i] >= 127)

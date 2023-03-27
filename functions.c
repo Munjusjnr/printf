@@ -41,7 +41,7 @@ char *rev_string(char *s)
 	int head;
 	char tmp;
 	char *dest;
-	
+
 	if (s == NULL)
 	{
 		s = "";

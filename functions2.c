@@ -67,7 +67,7 @@ int print_unsigned_num(unsigned int n)
 
 /**
  * print_rev - Calls a function to reverse and print a string
- * @arg: Argument passed to the function
+ * @list: Argument passed to the function
  * Return: The amount of characters printed
  */
 int print_rev(va_list list)
