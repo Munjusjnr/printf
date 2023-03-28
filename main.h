@@ -38,5 +38,6 @@ void write_base(char *str);
 unsigned int base_length(unsigned int num, int base);
 char *rev_string(char *s);
 char *_memcpy(char *dest, char *src, unsigned int n);
+void print_buffer(char buffer[], int *buff_ind);
 
 #endif
