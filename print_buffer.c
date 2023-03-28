@@ -9,7 +9,7 @@
 
 void print_buffer(char buffer[], int *buff_ind)
 {
-	static char local_buffer[1024];
+	/*static char local_buffer[1024];*/
 	int local_buff_ind = 0;
 
 	for (int i = 0; i < *buff_ind; i++)
