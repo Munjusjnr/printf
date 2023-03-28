@@ -11,6 +11,7 @@ int _printf(const char *format, ...)
 		{"c", print_char},
 		{"s", print_str},
 		{"S", print_String},
+		{"p", print_point},
 		{"%", print_per},
 		{"d", print_int},
 		{"i", print_int},
