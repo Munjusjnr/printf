@@ -7,7 +7,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define LOCAL_BUFFER 1024
 
 struct conv
 {
